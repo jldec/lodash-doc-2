@@ -16,13 +16,13 @@ body {
 
 a { color:#4183c4; text-decoration:none; }
 
-#navicon > span { display:inline-block; position:fixed; top:0; left:0; width:44px;
-  text-align:center; padding-top:6px; color:#000; opacity:0.3; z-index:300; }
+#nav { position:fixed; top:0; left:0; bottom:0; width:240px; background-color:#f0f7ff; border-right:1px solid #eee; transition:left 0.2s; }
 
-#toc { position:fixed; top:0; left:0; bottom:0; width:240px; background-color:#f0f7ff; border-right:1px solid #eee; transition:left 0.2s; }
+#nav > span.fa { display:inline-block; position:fixed; top:0; left:-44px; width:44px;
+  text-align:center; padding-top:6px; z-index:300; }
 
 header { background-color:#f0f7ff; }
-header a { display:block; font-size:18px; font-weight:400; margin:0 0 0 44px; color:#4183c4; line-height:32px; }
+header a { display:block; font-size:18px; font-weight:400; margin:0 0 0 12px; color:#4183c4; line-height:32px; }
 header img { width:33px; vertical-align:bottom; margin:6px 4px 0 0;}
 
 #search { padding:6px 8px; background-color:#f0f7ff; border-bottom:1px solid #eee; }
@@ -44,9 +44,10 @@ header img { width:33px; vertical-align:bottom; margin:6px 4px 0 0;}
 #toggleall { display:inline-block; cursor:pointer; float:right; padding:0 5px; }
 #toggleall:hover { color:#4183c4; background-color:#f0f7ff; }
 
-#toclist { position:absolute; top:75px; bottom:0; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:16px; }
+#toc { position:absolute; top:75px; left:0; bottom:0; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:16px; }
+#toc::-webkit-scrollbar { width:0; }
 
-#toclist::-webkit-scrollbar { width:0; }
+#toc ul { list-style:none; padding:0; margin:0; }
 
 span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 #content span.aliases:before { content:" (alias: "; }
@@ -54,21 +55,16 @@ span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 
 #tochead a { margin:10px 0 0 0; }
 
-#toclist span.folderPage { display:block; color:#555; color:#4183c4; font-size:18px; padding:10px 0 0 16px; }
+#toc span.folderPage { display:block; color:#555; color:#4183c4; font-size:18px; padding:12px 0 0 14px; }
 
-#toclist a { display:block; color:#555; padding-left:30px; }
-#toclist a.open, #toclist a.open span.aliases { background-color:#4183c4; color:#fff; }
-#toclist a:hover, #toclist a:active, #toclist a:hover.open span.aliases { background-color:#ccc; }
-
-#toclist ul { list-style:none; padding:0; margin:0; }
-#toclist > ul { }
+#toc a { display:block; color:#555; padding-left:30px; }
+#toc a.open, #toc a.open span.aliases { background-color:#4183c4; color:#fff; }
+#toc a:hover, #toc a:active, #toc a.open:hover span.aliases { background-color:#ccc; }
 
 pre { background-color:#f8f5ec; padding:1em; word-wrap:normal; overflow:auto; }
 pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:13px; line-height:22px; }
 
-#main { margin:30px 0 0 240px; /* transition:margin-left 0.2s; */ }
-#toc.show + #main { margin-left:240px; }
-
+#main { margin:40px 0 0 240px; }
 #content { max-width:700px; margin:0 auto; padding:0 10px 10em 10px; }
 
 #content p, #content blockquote, #content ul, #content ol, #content dl, #content table, #content pre { margin-top:0; margin-bottom:16px; }
@@ -92,11 +88,14 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
 .param-type, .return-type { font-style:italic; font-weight:normal; }
 
 @media only screen and (max-width:666px) {
-  #main { margin-left:0; }
-  #toc { left:-240px; }
-  #navicon > span { color:#4183c4; opacity:0.5; cursor:pointer; }
-  #navicon > span:hover { opacity:1; }
-  #toc.show, #toc:hover, #toc.active, #navicon > span:hover + #toc { left:0; }
+  body { overflow-x:hidden; }
+  #main { margin-left:0; transition:margin 0.2s; }
+  #nav { left:-240px; }
+  #nav.show, #nav:hover, #nav.active { left:0; }
+  #nav.show + #main, #nav:hover + #main, #nav.active + #main { margin-left:240px; margin-right:-240px; }
+  #nav > span.fa { left:0; color:#4183c4; opacity:0.5; cursor:pointer; }
+  #nav > span.fa:hover { opacity:1; }
+  #nav > header a { margin:0 0 0 44px; }
 }
 
 @media only screen and (max-width:400px) {
@@ -106,7 +105,7 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
 @media print {
 html, body { font-size:10px; color:#000; }
 a { color:#000; text-decoration:underline; }
-header, #toc, #credit, .pub-button, #content h2 > a { display:none; }
+#nav, #credit, .pub-button, #content h2 > a { display:none; }
 #main { margin:5em; }
 #content { max-width:80em; margin:0; padding:0; }
 }

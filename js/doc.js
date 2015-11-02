@@ -20,8 +20,8 @@ window.onGenerator = function(generator) {
 function initPage(path) {
 
 var $html = $('html');
+var $nav = $('#nav');
 var $toc = $('#toc');
-var $toclist = $('#toclist');
 var $searchInput = $('#q');
 var $navIcon = $('#navicon');
 var $toggleAll = $('#toggleall');
@@ -31,35 +31,34 @@ var height = html.clientHeight;
 var width = html.clientWidth;
 
 var toc = $toc.get(0);
-var toclist = $toclist.get(0);
 var freshTocScrollState = true;
 var searchInput = $searchInput.get(0);
 var thisUrl = path || (pubRef.relPath + pubRef.href);
 
 // highlight current page in toc
-var $tocpagelink = $('#toclist a[href="' + thisUrl + '"]').addClass('open');
+var $tocpagelink = $('#toc a[href="' + thisUrl + '"]').addClass('open');
 
 // try to restore previous toc scroll position
 if (localStorage.tocpos) {
-  $toclist.scrollTop(localStorage.tocpos);
+  $toc.scrollTop(localStorage.tocpos);
 }
 
 // if necessary scroll toc to show current page
 var toclinktop = ($tocpagelink.length && $tocpagelink.offset().top) || 0;
-if (toclinktop > (toclist.offsetTop + toclist.clientHeight) || // below
-    toclinktop < toclist.offsetTop) { // above
-  $toclist.scrollTop($tocpagelink.get(0).offsetTop);
+if (toclinktop > (toc.offsetTop + toc.clientHeight) || // below
+    toclinktop < toc.offsetTop) { // above
+  $toc.scrollTop($tocpagelink.get(0).offsetTop);
 }
 
 // always save state before navigating
 var onIOS = /iPad|iPhone/i.test(navigator.userAgent);
 $(window).on(onIOS ? "pagehide" : "beforeunload", function() {
-  localStorage.tocpos = $toclist.scrollTop();
+  localStorage.tocpos = $toc.scrollTop();
 });
 
 // extract search data from page-tree
 var searchData = []
-$('#toclist a').each(function(){
+$('#toc a').each(function(){
   var a = $(this);
   searchData.push({ href:a.attr('href'), text:a.text(), htmlText:this.innerHTML, title:a.attr('title') });
 });
@@ -82,7 +81,7 @@ $searchInput
 $(window).keydown(function(evt) {
   if (evt.metaKey || evt.altKey || evt.ctrlKey  || evt.target == searchInput) return true;
   var k = evt.keyCode;
-  if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); $toc.addClass('show'); } // a-z . _
+  if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); $nav.addClass('show'); } // a-z . _
   if (k === 37) { jump(-1); } // left
   if (k === 39) { jump(1); } // right
   return true;
