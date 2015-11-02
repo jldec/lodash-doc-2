@@ -15,7 +15,8 @@ body {
 }
 
 a { color:#4183c4; text-decoration:none; }
-a:hover { text-decoration:underline; }
+
+#navicon { position:fixed: top:0; left:0; width:44px; height:44px; }
 
 #navicon > span { display:inline-block; position:fixed; top:0; left:0; width:44px;
   text-align:center; padding-top:6px; color:#000; opacity:0.3; z-index:300; }
@@ -96,8 +97,8 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
   #main { margin-left:0; }
   #toc { left:-240px; }
   #navicon > span { color:#4183c4; opacity:0.5; cursor:pointer; }
-  #navicon:hover > span { opacity:1; }
-  #navicon:hover > #toc, #navicon:active > #toc, #toc.show { left:0; }
+  #navicon > span:hover { opacity:1; }
+  #toc.show, #toc:hover, #toc.active, #navicon > span:hover + #toc { left:0; }
 }
 
 @media only screen and (max-width:400px) {
