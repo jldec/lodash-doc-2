@@ -16,8 +16,6 @@ body {
 
 a { color:#4183c4; text-decoration:none; }
 
-#navicon { position:fixed: top:0; left:0; width:44px; height:44px; }
-
 #navicon > span { display:inline-block; position:fixed; top:0; left:0; width:44px;
   text-align:center; padding-top:6px; color:#000; opacity:0.3; z-index:300; }
 
