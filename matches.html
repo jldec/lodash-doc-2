@@ -46,6 +46,8 @@
 <li><a href="./chunk" title="_.chunk(array, [size=0])">chunk</a></li>
 <li><a href="./compact" title="_.compact(array)">compact</a></li>
 <li><a href="./difference" title="_.difference(array, [values])">difference</a></li>
+<li><a href="./differenceBy" title="_.differenceBy(array, [values], [iteratee=_.identity])">differenceBy</a></li>
+<li><a href="./differenceWith" title="_.differenceWith(array, [values], [comparator])">differenceWith</a></li>
 <li><a href="./drop" title="_.drop(array, [n=1])">drop</a></li>
 <li><a href="./dropRight" title="_.dropRight(array, [n=1])">dropRight</a></li>
 <li><a href="./dropRightWhile" title="_.dropRightWhile(array, [predicate=_.identity])">dropRightWhile</a></li>
@@ -53,18 +55,22 @@
 <li><a href="./fill" title="_.fill(array, value, [start=0], [end=array.length])">fill</a></li>
 <li><a href="./findIndex" title="_.findIndex(array, [predicate=_.identity])">findIndex</a></li>
 <li><a href="./findLastIndex" title="_.findLastIndex(array, [predicate=_.identity])">findLastIndex</a></li>
-<li><a href="./first" title="_.first(array)">first</a></li>
 <li><a href="./flatten" title="_.flatten(array)">flatten</a></li>
 <li><a href="./flattenDeep" title="_.flattenDeep(array)">flattenDeep</a></li>
+<li><a href="./head" title="_.head(array)">head <span class="aliases">first</span></a></li>
 <li><a href="./indexOf" title="_.indexOf(array, value, [fromIndex=0])">indexOf</a></li>
 <li><a href="./initial" title="_.initial(array)">initial</a></li>
 <li><a href="./intersection" title="_.intersection([arrays])">intersection</a></li>
+<li><a href="./intersectionBy" title="_.intersectionBy([arrays], [iteratee=_.identity])">intersectionBy</a></li>
+<li><a href="./intersectionWith" title="_.intersectionWith([arrays], [comparator])">intersectionWith</a></li>
 <li><a href="./last" title="_.last(array)">last</a></li>
 <li><a href="./lastIndexOf" title="_.lastIndexOf(array, value, [fromIndex=array.length-1])">lastIndexOf</a></li>
+<li><a href="./prototype-reverse" title="_.prototype.reverse()">prototype.reverse</a></li>
 <li><a href="./pull" title="_.pull(array, [values])">pull</a></li>
+<li><a href="./pullAll" title="_.pullAll(array, values)">pullAll</a></li>
+<li><a href="./pullAllBy" title="_.pullAllBy(array, values, [iteratee=_.identity])">pullAllBy</a></li>
 <li><a href="./pullAt" title="_.pullAt(array, [indexes])">pullAt</a></li>
 <li><a href="./remove" title="_.remove(array, [predicate=_.identity])">remove</a></li>
-<li><a href="./rest" title="_.rest(array)">rest</a></li>
 <li><a href="./slice" title="_.slice(array, [start=0], [end=array.length])">slice</a></li>
 <li><a href="./sortedIndex" title="_.sortedIndex(array, value)">sortedIndex</a></li>
 <li><a href="./sortedIndexBy" title="_.sortedIndexBy(array, value, [iteratee=_.identity])">sortedIndexBy</a></li>
@@ -74,17 +80,23 @@
 <li><a href="./sortedLastIndexOf" title="_.sortedLastIndexOf(array, value)">sortedLastIndexOf</a></li>
 <li><a href="./sortedUniq" title="_.sortedUniq(array)">sortedUniq</a></li>
 <li><a href="./sortedUniqBy" title="_.sortedUniqBy(array, [iteratee])">sortedUniqBy</a></li>
+<li><a href="./tail" title="_.tail(array)">tail</a></li>
 <li><a href="./take" title="_.take(array, [n=1])">take</a></li>
 <li><a href="./takeRight" title="_.takeRight(array, [n=1])">takeRight</a></li>
 <li><a href="./takeRightWhile" title="_.takeRightWhile(array, [predicate=_.identity])">takeRightWhile</a></li>
 <li><a href="./takeWhile" title="_.takeWhile(array, [predicate=_.identity])">takeWhile</a></li>
 <li><a href="./union" title="_.union([arrays])">union</a></li>
+<li><a href="./unionBy" title="_.unionBy([arrays], [iteratee=_.identity])">unionBy</a></li>
+<li><a href="./unionWith" title="_.unionWith([arrays], [comparator])">unionWith</a></li>
 <li><a href="./uniq" title="_.uniq(array)">uniq</a></li>
 <li><a href="./uniqBy" title="_.uniqBy(array, [iteratee=_.identity])">uniqBy</a></li>
+<li><a href="./uniqWith" title="_.uniqWith(array, [comparator])">uniqWith</a></li>
 <li><a href="./unzip" title="_.unzip(array)">unzip</a></li>
 <li><a href="./unzipWith" title="_.unzipWith(array, [iteratee=_.identity])">unzipWith</a></li>
 <li><a href="./without" title="_.without(array, [values])">without</a></li>
 <li><a href="./xor" title="_.xor([arrays])">xor</a></li>
+<li><a href="./xorBy" title="_.xorBy([arrays], [iteratee=_.identity])">xorBy</a></li>
+<li><a href="./xorWith" title="_.xorWith([arrays], [comparator])">xorWith</a></li>
 <li><a href="./zip" title="_.zip([arrays])">zip</a></li>
 <li><a href="./zipObject" title="_.zipObject(props, [values=[]])">zipObject</a></li>
 <li><a href="./zipWith" title="_.zipWith([arrays], [iteratee=_.identity])">zipWith</a></li>
@@ -98,8 +110,7 @@
 <li><a href="./prototype-concat" title="_.prototype.concat([values])">prototype.concat</a></li>
 <li><a href="./prototype-next" title="_.prototype.next()">prototype.next</a></li>
 <li><a href="./prototype-plant" title="_.prototype.plant(value)">prototype.plant</a></li>
-<li><a href="./prototype-reverse" title="_.prototype.reverse()">prototype.reverse</a></li>
-<li><a href="./prototype-toString" title="_.prototype.toString()">prototype.toString</a></li>
+<li><a href="./prototype-Symbol-iterator" title="_.prototype.Symbol.iterator()">prototype.Symbol.iterator</a></li>
 <li><a href="./prototype-value" title="_.prototype.value()">prototype.value <span class="aliases">run, toJSON, valueOf</span></a></li>
 <li><a href="./tap" title="_.tap(value, interceptor)">tap</a></li>
 <li><a href="./thru" title="_.thru(value, interceptor)">thru</a></li>
@@ -122,7 +133,8 @@
 <li><a href="./reduce" title="_.reduce(collection, [iteratee=_.identity], [accumulator])">reduce</a></li>
 <li><a href="./reduceRight" title="_.reduceRight(collection, [iteratee=_.identity], [accumulator])">reduceRight</a></li>
 <li><a href="./reject" title="_.reject(collection, [predicate=_.identity])">reject</a></li>
-<li><a href="./sample" title="_.sample(collection, [n])">sample</a></li>
+<li><a href="./sample" title="_.sample(collection)">sample</a></li>
+<li><a href="./sampleSize" title="_.sampleSize(collection, [n=0])">sampleSize</a></li>
 <li><a href="./shuffle" title="_.shuffle(collection)">shuffle</a></li>
 <li><a href="./size" title="_.size(collection)">size</a></li>
 <li><a href="./some" title="_.some(collection, [predicate=_.identity])">some</a></li>
@@ -147,8 +159,6 @@
 <li><a href="./defer" title="_.defer(func, [args])">defer</a></li>
 <li><a href="./delay" title="_.delay(func, wait, [args])">delay</a></li>
 <li><a href="./flip" title="_.flip(func)">flip</a></li>
-<li><a href="./flow" title="_.flow([funcs])">flow</a></li>
-<li><a href="./flowRight" title="_.flowRight([funcs])">flowRight</a></li>
 <li><a href="./memoize" title="_.memoize(func, [resolver])">memoize</a></li>
 <li><a href="./modArgs" title="_.modArgs(func, [transforms])">modArgs</a></li>
 <li><a href="./modArgsSet" title="_.modArgsSet(func, [transforms])">modArgsSet</a></li>
@@ -157,9 +167,10 @@
 <li><a href="./partial" title="_.partial(func, [partials])">partial</a></li>
 <li><a href="./partialRight" title="_.partialRight(func, [partials])">partialRight</a></li>
 <li><a href="./rearg" title="_.rearg(func, indexes)">rearg</a></li>
-<li><a href="./restParam" title="_.restParam(func, [start=func.length-1])">restParam</a></li>
+<li><a href="./rest" title="_.rest(func, [start=func.length-1])">rest</a></li>
 <li><a href="./spread" title="_.spread(func)">spread</a></li>
 <li><a href="./throttle" title="_.throttle(func, [wait=0], [options])">throttle</a></li>
+<li><a href="./unary" title="_.unary(func)">unary</a></li>
 <li><a href="./wrap" title="_.wrap(value, wrapper)">wrap</a></li>
 </ul></li>
 <li id="page-tree-lang" class="folder"><span class="folderPage">Lang</span>
@@ -174,6 +185,7 @@
 <li><a href="./isArguments" title="_.isArguments(value)">isArguments</a></li>
 <li><a href="./isArray" title="_.isArray(value)">isArray</a></li>
 <li><a href="./isArrayLike" title="_.isArrayLike(value)">isArrayLike</a></li>
+<li><a href="./isArrayLikeObject" title="_.isArrayLikeObject(value)">isArrayLikeObject</a></li>
 <li><a href="./isBoolean" title="_.isBoolean(value)">isBoolean</a></li>
 <li><a href="./isDate" title="_.isDate(value)">isDate</a></li>
 <li><a href="./isElement" title="_.isElement(value)">isElement</a></li>
@@ -183,6 +195,8 @@
 <li><a href="./isError" title="_.isError(value)">isError</a></li>
 <li><a href="./isFinite" title="_.isFinite(value)">isFinite</a></li>
 <li><a href="./isFunction" title="_.isFunction(value)">isFunction</a></li>
+<li><a href="./isInteger" title="_.isInteger(value)">isInteger</a></li>
+<li><a href="./isLength" title="_.isLength(value)">isLength</a></li>
 <li><a href="./isMatch" title="_.isMatch(object, source)">isMatch</a></li>
 <li><a href="./isMatchWith" title="_.isMatchWith(object, source, [customizer])">isMatchWith</a></li>
 <li><a href="./isNaN" title="_.isNaN(value)">isNaN</a></li>
@@ -194,6 +208,7 @@
 <li><a href="./isObjectLike" title="_.isObjectLike(value)">isObjectLike</a></li>
 <li><a href="./isPlainObject" title="_.isPlainObject(value)">isPlainObject</a></li>
 <li><a href="./isRegExp" title="_.isRegExp(value)">isRegExp</a></li>
+<li><a href="./isSafeInteger" title="_.isSafeInteger(value)">isSafeInteger</a></li>
 <li><a href="./isString" title="_.isString(value)">isString</a></li>
 <li><a href="./isTypedArray" title="_.isTypedArray(value)">isTypedArray</a></li>
 <li><a href="./isUndefined" title="_.isUndefined(value)">isUndefined</a></li>
@@ -201,40 +216,46 @@
 <li><a href="./lte" title="_.lte(value, other)">lte</a></li>
 <li><a href="./toArray" title="_.toArray(value)">toArray</a></li>
 <li><a href="./toInteger" title="_.toInteger(value)">toInteger</a></li>
+<li><a href="./toLength" title="_.toLength(value)">toLength</a></li>
+<li><a href="./toNumber" title="_.toNumber(value)">toNumber</a></li>
 <li><a href="./toPlainObject" title="_.toPlainObject(value)">toPlainObject</a></li>
+<li><a href="./toSafeInteger" title="_.toSafeInteger(value)">toSafeInteger</a></li>
+<li><a href="./toString" title="_.toString(value)">toString</a></li>
 </ul></li>
 <li id="page-tree-math" class="folder"><span class="folderPage">Math</span>
 <ul>
 <li><a href="./add" title="_.add(augend, addend)">add</a></li>
-<li><a href="./ceil" title="_.ceil(n, [precision=0])">ceil</a></li>
-<li><a href="./floor" title="_.floor(n, [precision=0])">floor</a></li>
+<li><a href="./ceil" title="_.ceil(number, [precision=0])">ceil</a></li>
+<li><a href="./floor" title="_.floor(number, [precision=0])">floor</a></li>
 <li><a href="./max" title="_.max(array)">max</a></li>
 <li><a href="./maxBy" title="_.maxBy(array, [iteratee=_.identity])">maxBy</a></li>
 <li><a href="./min" title="_.min(array)">min</a></li>
 <li><a href="./minBy" title="_.minBy(array, [iteratee=_.identity])">minBy</a></li>
-<li><a href="./round" title="_.round(n, [precision=0])">round</a></li>
+<li><a href="./round" title="_.round(number, [precision=0])">round</a></li>
 <li><a href="./sum" title="_.sum(array)">sum</a></li>
 <li><a href="./sumBy" title="_.sumBy(array, [iteratee=_.identity])">sumBy</a></li>
 </ul></li>
 <li id="page-tree-methods" class="folder"><span class="folderPage">Methods</span>
 <ul>
+<li><a href="./stringSize" title="stringSize(string)">stringSize</a></li>
 <li><a href="./templateSettings-imports-_" title="_.templateSettings.imports._">templateSettings.imports._</a></li>
 </ul></li>
 <li id="page-tree-number" class="folder"><span class="folderPage">Number</span>
 <ul>
-<li><a href="./inRange" title="_.inRange(n, [start=0], end)">inRange</a></li>
+<li><a href="./clamp" title="_.clamp(number, [min], max)">clamp</a></li>
+<li><a href="./inRange" title="_.inRange(number, [start=0], end)">inRange</a></li>
 <li><a href="./random" title="_.random([min=0], [max=1], [floating])">random</a></li>
 </ul></li>
 <li id="page-tree-object" class="folder"><span class="folderPage">Object</span>
 <ul>
 <li><a href="./assign" title="_.assign(object, [sources])">assign</a></li>
+<li><a href="./assignIn" title="_.assignIn(object, [sources])">assignIn <span class="aliases">extend</span></a></li>
+<li><a href="./assignInWith" title="_.assignInWith(object, sources, [customizer])">assignInWith <span class="aliases">extendWith</span></a></li>
 <li><a href="./assignWith" title="_.assignWith(object, sources, [customizer])">assignWith</a></li>
 <li><a href="./at" title="_.at(object, [paths])">at</a></li>
 <li><a href="./create" title="_.create(prototype, [properties])">create</a></li>
 <li><a href="./defaults" title="_.defaults(object, [sources])">defaults</a></li>
 <li><a href="./defaultsDeep" title="_.defaultsDeep(object, [sources])">defaultsDeep</a></li>
-<li><a href="./extend" title="_.extend(object, [sources])">extend</a></li>
-<li><a href="./extendWith" title="_.extendWith(object, sources, [customizer])">extendWith</a></li>
 <li><a href="./findKey" title="_.findKey(object, [predicate=_.identity])">findKey</a></li>
 <li><a href="./findLastKey" title="_.findLastKey(object, [predicate=_.identity])">findLastKey</a></li>
 <li><a href="./forIn" title="_.forIn(object, [iteratee=_.identity])">forIn</a></li>
@@ -242,6 +263,7 @@
 <li><a href="./forOwn" title="_.forOwn(object, [iteratee=_.identity])">forOwn</a></li>
 <li><a href="./forOwnRight" title="_.forOwnRight(object, [iteratee=_.identity])">forOwnRight</a></li>
 <li><a href="./functions" title="_.functions(object)">functions</a></li>
+<li><a href="./functionsIn" title="_.functionsIn(object)">functionsIn</a></li>
 <li><a href="./get" title="_.get(object, path, [defaultValue])">get</a></li>
 <li><a href="./has" title="_.has(object, path)">has</a></li>
 <li><a href="./hasIn" title="_.hasIn(object, path)">hasIn</a></li>
@@ -255,6 +277,7 @@
 <li><a href="./omit" title="_.omit(object, [props])">omit</a></li>
 <li><a href="./omitBy" title="_.omitBy(object, [predicate=_.identity])">omitBy</a></li>
 <li><a href="./pairs" title="_.pairs(object)">pairs</a></li>
+<li><a href="./pairsIn" title="_.pairsIn(object)">pairsIn</a></li>
 <li><a href="./pick" title="_.pick(object, [props])">pick</a></li>
 <li><a href="./pickBy" title="_.pickBy(object, [predicate=_.identity])">pickBy</a></li>
 <li><a href="./result" title="_.result(object, path, [defaultValue])">result</a></li>
@@ -284,6 +307,8 @@
 <li><a href="./escape" title="_.escape([string=&#39;&#39;])">escape</a></li>
 <li><a href="./escapeRegExp" title="_.escapeRegExp([string=&#39;&#39;])">escapeRegExp</a></li>
 <li><a href="./kebabCase" title="_.kebabCase([string=&#39;&#39;])">kebabCase</a></li>
+<li><a href="./lowerCase" title="_.lowerCase([string=&#39;&#39;])">lowerCase</a></li>
+<li><a href="./lowerFirst" title="_.lowerFirst([string=&#39;&#39;])">lowerFirst</a></li>
 <li><a href="./pad" title="_.pad([string=&#39;&#39;], [length=0], [chars=&#39; &#39;])">pad</a></li>
 <li><a href="./padLeft" title="_.padLeft([string=&#39;&#39;], [length=0], [chars=&#39; &#39;])">padLeft</a></li>
 <li><a href="./padRight" title="_.padRight([string=&#39;&#39;], [length=0], [chars=&#39; &#39;])">padRight</a></li>
@@ -293,19 +318,29 @@
 <li><a href="./startCase" title="_.startCase([string=&#39;&#39;])">startCase</a></li>
 <li><a href="./startsWith" title="_.startsWith([string=&#39;&#39;], [target], [position=0])">startsWith</a></li>
 <li><a href="./template" title="_.template([string=&#39;&#39;], [options])">template</a></li>
+<li><a href="./toLower" title="_.toLower([string=&#39;&#39;])">toLower</a></li>
+<li><a href="./toUpper" title="_.toUpper([string=&#39;&#39;])">toUpper</a></li>
 <li><a href="./trim" title="_.trim([string=&#39;&#39;], [chars=whitespace])">trim</a></li>
 <li><a href="./trimLeft" title="_.trimLeft([string=&#39;&#39;], [chars=whitespace])">trimLeft</a></li>
 <li><a href="./trimRight" title="_.trimRight([string=&#39;&#39;], [chars=whitespace])">trimRight</a></li>
-<li><a href="./trunc" title="_.trunc([string=&#39;&#39;], [options])">trunc</a></li>
+<li><a href="./truncate" title="_.truncate([string=&#39;&#39;], [options])">truncate</a></li>
 <li><a href="./unescape" title="_.unescape([string=&#39;&#39;])">unescape</a></li>
+<li><a href="./upperCase" title="_.upperCase([string=&#39;&#39;])">upperCase</a></li>
+<li><a href="./upperFirst" title="_.upperFirst([string=&#39;&#39;])">upperFirst</a></li>
 <li><a href="./words" title="_.words([string=&#39;&#39;], [pattern])">words</a></li>
 </ul></li>
 <li id="page-tree-utility" class="folder"><span class="folderPage">Utility</span>
 <ul>
 <li><a href="./attempt" title="_.attempt(func)">attempt</a></li>
+<li><a href="./conforms" title="_.conforms(source)">conforms</a></li>
+<li><a href="./conj" title="_.conj(predicates)">conj</a></li>
 <li><a href="./constant" title="_.constant(value)">constant</a></li>
+<li><a href="./disj" title="_.disj(predicates)">disj</a></li>
+<li><a href="./flow" title="_.flow([funcs])">flow</a></li>
+<li><a href="./flowRight" title="_.flowRight([funcs])">flowRight</a></li>
 <li><a href="./identity" title="_.identity(value)">identity</a></li>
 <li><a href="./iteratee" title="_.iteratee([func=_.identity])">iteratee</a></li>
+<li><a href="./juxt" title="_.juxt(iteratees)">juxt</a></li>
 <li><a href="./matches" title="_.matches(source)">matches</a></li>
 <li><a href="./matchesProperty" title="_.matchesProperty(path, srcValue)">matchesProperty</a></li>
 <li><a href="./method" title="_.method(path, [args])">method</a></li>
@@ -313,6 +348,7 @@
 <li><a href="./mixin" title="_.mixin([object=lodash], source, [options])">mixin</a></li>
 <li><a href="./noConflict" title="_.noConflict()">noConflict</a></li>
 <li><a href="./noop" title="_.noop()">noop</a></li>
+<li><a href="./nthArg" title="_.nthArg([n=0])">nthArg</a></li>
 <li><a href="./property" title="_.property(path)">property</a></li>
 <li><a href="./propertyOf" title="_.propertyOf(object)">propertyOf</a></li>
 <li><a href="./range" title="_.range([start=0], end, [step=1])">range</a></li>
@@ -328,12 +364,12 @@
 
 <div id="main" onclick="">
 <div id="content" class="markdown-body">
-<div data-render-page="entry"><h2>matches <a class="fa-link" href="./matches" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0/lodash.src.js#L11212" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.matches" title="See the npm package." target="npm">npm</a></h2>
+<div data-render-page="entry"><h2>matches <a class="fa-link" href="./matches" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0/lodash.src.js#L12684" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.matches" title="See the npm package." target="npm">npm</a></h2>
 <div class="signature">_.matches(source)</div>
 
-<div data-render-html="/matches"><p>Creates a function that performs a deep comparison between a given object
-and <code>source</code>, returning <code>true</code> if the given object has equivalent property
-values, else <code>false</code>.
+<div data-render-html="/matches"><p>Creates a function that performs a deep partial comparison between a given
+object and <code>source</code>, returning <code>true</code> if the given object has equivalent
+property values, else <code>false</code>.
 <br>
 <br>
 <strong>Note:</strong> This method supports comparing arrays, booleans, <code>Date</code> objects,

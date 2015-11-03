@@ -10,7 +10,9 @@ To edit the site locally, clone https://github.com/jldec/lodash-doc-src, then
 npm install
 ```
 
-`pub-config` points to the source in '../../lodash/lodash/lodash.js'. To preview at http://localhost:3001/ while you edit
+`pub-config.js` points to the lodash source code in '../../lodash/lodash/lodash.js'. Either modify pub-config to point to the actual source location, or clone lodash to match this.
+
+To generate the doc site and preview at http://localhost:3001/ while you edit
 
 ```sh
 npm run develop
