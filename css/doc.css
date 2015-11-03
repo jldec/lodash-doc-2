@@ -102,10 +102,11 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
   body { font-size:16px; }
 }
 
-@media print {
-html, body { font-size:10px; color:#000; }
-a { color:#000; text-decoration:underline; }
-#nav, #credit, .pub-button, #content h2 > a { display:none; }
-#main { margin:5em; }
-#content { max-width:80em; margin:0; padding:0; }
+@media only print {
+  html, body { font-size:10px; color:#000; }
+  pre, code { font-size:10px; }
+  #main { margin:5em; }
+  #content { max-width:80em; margin:0; padding:0; }
+  #nav, #credit, .pub-button { display:none; }
+  #content h2 a { display:none; }
 }
