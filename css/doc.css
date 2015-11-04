@@ -22,8 +22,9 @@ a { color:#4078c0; text-decoration:none; }
   text-align:center; padding-top:6px; z-index:300; }
 
 header { background-color:#f0f7ff; }
-header a { display:block; font-size:18px; font-weight:400; margin:0 0 0 12px; color:#4078c0; line-height:32px; }
+header a { font-size:18px; font-weight:400; margin:0 0 0 12px; color:#4078c0; line-height:32px; }
 header img { width:33px; vertical-align:bottom; margin:6px 4px 0 0;}
+header a.build { float:right; font-size:8px; color:#aaa; margin:1px; line-height:10px; }
 
 #search { padding:6px 8px; background-color:#f0f7ff; border-bottom:1px solid #eee; }
 
