@@ -59,8 +59,8 @@ span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 #toc span.folderPage { display:block; color:#555; color:#4078c0; font-size:18px; padding:12px 0 0 14px; }
 
 #toc a { display:block; color:#555; padding-left:30px; }
-#toc a.open, #toc a.open span.aliases { background-color:#4078c0; color:#fff; }
 #toc a:hover, #toc a:active, #toc a.open:hover span.aliases { background-color:#ccc; }
+#toc a.open, #toc a.open span.aliases { background-color:#4078c0; color:#fff; outline:none; }
 
 pre { background-color:#f8f5ec; padding:1em; word-wrap:normal; overflow:auto; }
 pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:13px; line-height:22px; }
