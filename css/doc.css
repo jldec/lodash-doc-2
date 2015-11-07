@@ -10,7 +10,7 @@
 body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
-  font-size:14px; line-height:1.6; font-weight:400; word-wrap:break-word;
+  font-size:16px; line-height:1.6; font-weight:400; word-wrap:break-word;
   color:#555; background-color:#fff; margin:0;
 }
 
@@ -28,7 +28,7 @@ header a.build { float:right; font-size:8px; color:#aaa; margin:1px; line-height
 
 #search { padding:6px 8px; background-color:#f0f7ff; border-bottom:1px solid #eee; }
 
-#q { padding:2px 8px; font-size:14px; color:#000; width:220px; border-radius:3px; border:1px solid #ccc; box-sizing:border-box; }
+#q { padding:2px 8px; font-size:16px; color:#000; width:220px; border-radius:3px; border:1px solid #ccc; box-sizing:border-box; }
 
 #search-form > ul {
   position:absolute; z-index:40; left:-10000px; top:74px; width:240px; max-height:480px; background-color:#fff;
@@ -56,14 +56,14 @@ span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 
 #tochead a { margin:10px 0 0 0; }
 
-#toc span.folderPage { display:block; color:#555; color:#4078c0; font-size:18px; padding:12px 0 0 14px; }
+#toc span.folderPage { display:block; color:#555; color:#4078c0; font-size:18px; padding:12px 0 0 16px; }
 
 #toc a { display:block; color:#555; padding-left:30px; }
 #toc a:hover, #toc a:active, #toc a.open:hover span.aliases { background-color:#ccc; }
 #toc a.open, #toc a.open span.aliases { background-color:#4078c0; color:#fff; outline:none; }
 
 pre { background-color:#f8f5ec; padding:1em; word-wrap:normal; overflow:auto; }
-pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:13px; line-height:22px; }
+pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:14px; line-height:24px; }
 
 #main { margin:40px 0 0 240px; }
 #content { max-width:700px; margin:0 auto; padding:0 10px 10em 10px; }
@@ -97,10 +97,6 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
   #nav > span.fa { left:0; color:#4078c0; opacity:0.5; cursor:pointer; }
   #nav > span.fa:hover { opacity:1; }
   #nav > header a { margin:0 0 0 44px; }
-}
-
-@media only screen and (max-width:400px) {
-  body { font-size:16px; }
 }
 
 @media only print {
