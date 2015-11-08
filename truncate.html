@@ -20,11 +20,10 @@
 </head>
 <body>
 
-<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x">&#xf039;</span>
+<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x"></span>
 
 <header>
-<a class="version" href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
-<a class="build" href="https://github.com/jldec/lodash-doc-src" target="_blank">Nov 7 09:22:07 EST</a>
+<a href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
 </header>
 
 <div id="search">
@@ -235,6 +234,7 @@
 <li><a href="./min" title="_.min(array)">min</a></li>
 <li><a href="./minBy" title="_.minBy(array, [iteratee=_.identity])">minBy</a></li>
 <li><a href="./round" title="_.round(number, [precision=0])">round</a></li>
+<li><a href="./subtract" title="_.subtract(minuend, subtrahend)">subtract</a></li>
 <li><a href="./sum" title="_.sum(array)">sum</a></li>
 <li><a href="./sumBy" title="_.sumBy(array, [iteratee=_.identity])">sumBy</a></li>
 </ul></li>
@@ -367,8 +367,8 @@
 
 <div id="main" onclick="">
 <div id="content" class="markdown-body">
-<div data-render-page="entry"><h2>truncate <a class="fa-link" href="./truncate" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L12283" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.truncate" title="See the npm package." target="npm">npm</a></h2>
-<div class="signature">_.truncate([string=&#x27;&#x27;], [options])</div>
+<div data-render-page="entry"><h2>truncate <a class="fa-link" href="./truncate" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L12281" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.truncate" title="See the npm package." target="npm">npm</a></h2>
+<div class="signature">_.truncate([string&#x3D;&#x27;&#x27;], [options])</div>
 
 <div data-render-html="/truncate"><p>Truncates <code>string</code> if it&#39;s longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
@@ -377,13 +377,13 @@ string which defaults to &quot;...&quot;.</p>
 
 <h3>Arguments</h3>
 <ol>
-<li><span class="param-name">[string=&#x27;&#x27;]</span> <span class="param-type">(string)</span> <div data-render-html="/#synthetic"><p>The string to truncate. </p>
+<li><span class="param-name">[string&#x3D;&#x27;&#x27;]</span> <span class="param-type">(string)</span> <div data-render-html="/#synthetic"><p>The string to truncate. </p>
 </div></li>
 <li><span class="param-name">[options]</span> <span class="param-type">(Object)</span> <div data-render-html="/#synthetic"><p>The options object. </p>
 </div></li>
-<li><span class="param-name">[options.length=30]</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The maximum string length. </p>
+<li><span class="param-name">[options.length&#x3D;30]</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The maximum string length. </p>
 </div></li>
-<li><span class="param-name">[options.omission=&#x27;...&#x27;]</span> <span class="param-type">(string)</span> <div data-render-html="/#synthetic"><p>The string to indicate text is omitted. </p>
+<li><span class="param-name">[options.omission&#x3D;&#x27;...&#x27;]</span> <span class="param-type">(string)</span> <div data-render-html="/#synthetic"><p>The string to indicate text is omitted. </p>
 </div></li>
 <li><span class="param-name">[options.separator]</span> <span class="param-type">(RegExp|string)</span> <div data-render-html="/#synthetic"><p>The separator pattern to truncate to. </p>
 </div></li>

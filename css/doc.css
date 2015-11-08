@@ -10,7 +10,7 @@
 body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
-  font-size:16px; line-height:1.6; font-weight:400; word-wrap:break-word;
+  font-size:14px; line-height:1.6; font-weight:400; word-wrap:break-word;
   color:#555; background-color:#fff; margin:0;
 }
 
@@ -18,8 +18,9 @@ a { color:#4078c0; text-decoration:none; }
 
 #nav { position:fixed; top:0; left:0; bottom:0; width:240px; background-color:#f0f7ff; border-right:1px solid #eee; transition:left 0.2s; }
 
-#nav > span.fa { display:inline-block; position:fixed; top:0; left:-44px; width:44px;
+#nav > span.fa { display:inline-block; position:fixed; top:0; left:-50px; width:50px;
   text-align:center; padding-top:6px; z-index:300; }
+#nav > span.fa:before { content:"\f039"; }
 
 header { background-color:#f0f7ff; }
 header a { font-size:18px; font-weight:400; margin:0 0 0 12px; color:#4078c0; line-height:32px; }
@@ -28,7 +29,7 @@ header a.build { float:right; font-size:8px; color:#aaa; margin:1px; line-height
 
 #search { padding:6px 8px; background-color:#f0f7ff; border-bottom:1px solid #eee; }
 
-#q { padding:2px 8px; font-size:16px; color:#000; width:220px; border-radius:3px; border:1px solid #ccc; box-sizing:border-box; }
+#q { padding:2px 8px; font-size:14px; color:#000; width:220px; border-radius:3px; border:1px solid #ccc; box-sizing:border-box; }
 
 #search-form > ul {
   position:absolute; z-index:40; left:-10000px; top:74px; width:240px; max-height:480px; background-color:#fff;
@@ -42,9 +43,6 @@ header a.build { float:right; font-size:8px; color:#aaa; margin:1px; line-height
 #search-form li a { color:#0069b5; display:block; padding-left:16px; font-size:16px; }
 #search-form li a:hover { background-color:#ddd; }
 
-#toggleall { display:inline-block; cursor:pointer; float:right; padding:0 5px; }
-#toggleall:hover { color:#4078c0; background-color:#f0f7ff; }
-
 #toc { position:absolute; top:75px; left:0; bottom:0; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; padding-bottom:16px; }
 #toc::-webkit-scrollbar { width:0; }
 
@@ -56,14 +54,14 @@ span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 
 #tochead a { margin:10px 0 0 0; }
 
-#toc span.folderPage { display:block; color:#555; color:#4078c0; font-size:18px; padding:12px 0 0 16px; }
+#toc span.folderPage { display:block; color:#555; color:#4078c0; font-size:18px; padding:12px 0 0 14px; }
 
 #toc a { display:block; color:#555; padding-left:30px; }
 #toc a:hover, #toc a:active, #toc a.open:hover span.aliases { background-color:#ccc; }
 #toc a.open, #toc a.open span.aliases { background-color:#4078c0; color:#fff; outline:none; }
 
 pre { background-color:#f8f5ec; padding:1em; word-wrap:normal; overflow:auto; }
-pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:14px; line-height:24px; }
+pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:13px; line-height:22px; }
 
 #main { margin:40px 0 0 240px; }
 #content { max-width:700px; margin:0 auto; padding:0 10px 10em 10px; }
@@ -89,14 +87,17 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
 .param-type, .return-type { font-style:italic; font-weight:normal; }
 
 @media only screen and (max-width:666px) {
-  body { overflow-x:hidden; }
+  body { overflow-x:hidden; font-size:16px; }
+  #q { font-size:16px; }
+  pre, code { font-size:14px; }
   #main { margin-left:0; transition:margin 0.2s; }
   #nav { left:-240px; }
-  #nav.show, #nav:hover, #nav.active { left:0; }
-  #nav.show + #main, #nav:hover + #main, #nav.active + #main { margin-left:240px; margin-right:-240px; }
+  #nav.show { left:0; }
+  #nav.show + #main { margin-left:240px; margin-right:-240px; }
   #nav > span.fa { left:0; color:#4078c0; opacity:0.5; cursor:pointer; }
+  #nav.show > span.fa:before { content:"\f053"; }
   #nav > span.fa:hover { opacity:1; }
-  #nav > header a { margin:0 0 0 44px; }
+  #nav > header a { margin:0 0 0 50px; }
 }
 
 @media only print {

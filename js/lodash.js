@@ -2403,7 +2403,7 @@
     function baseFill(array, value, start, end) {
       var length = array.length;
 
-      start = start == null ? 0 : toInteger(start);
+      start = toInteger(start);
       if (start < 0) {
         start = -start > length ? 0 : (length + start);
       }
@@ -2411,10 +2411,8 @@
       if (end < 0) {
         end += length;
       }
-      length = start > end ? 0 : (end >>> 0);
-      start >>>= 0;
-
-      while (start < length) {
+      end = start > end ? 0 : toLength(end);
+      while (start < end) {
         array[start++] = value;
       }
       return array;
@@ -8146,10 +8144,10 @@
       if (typeof func != 'function') {
         throw new TypeError(FUNC_ERROR_TEXT);
       }
-      wait = wait < 0 ? 0 : (+wait || 0);
+      wait = toNumber(wait) || 0;
       if (isObject(options)) {
         leading = !!options.leading;
-        maxWait = 'maxWait' in options && nativeMax(+options.maxWait || 0, wait);
+        maxWait = 'maxWait' in options && nativeMax(toNumber(options.maxWait) || 0, wait);
         trailing = 'trailing' in options ? !!options.trailing : trailing;
       }
 
@@ -8285,7 +8283,7 @@
      * // => logs 'later' after one second
      */
     var delay = rest(function(func, wait, args) {
-      return baseDelay(func, wait, args);
+      return baseDelay(func, toNumber(wait) || 0, args);
     });
 
     /**
@@ -8730,7 +8728,7 @@
         leading = 'leading' in options ? !!options.leading : leading;
         trailing = 'trailing' in options ? !!options.trailing : trailing;
       }
-      return debounce(func, wait, { 'leading': leading, 'maxWait': +wait, 'trailing': trailing });
+      return debounce(func, wait, { 'leading': leading, 'maxWait': wait, 'trailing': trailing });
     }
 
     /**
@@ -13102,9 +13100,9 @@
      * @static
      * @memberOf _
      * @category Math
-     * @param {number} augend The first number to add.
-     * @param {number} addend The second number to add.
-     * @returns {number} Returns the sum.
+     * @param {number} augend The first number in an addition.
+     * @param {number} addend The second number in an addition.
+     * @returns {number} Returns the total.
      * @example
      *
      * _.add(6, 4);
@@ -13294,6 +13292,31 @@
      * // => 4100
      */
     var round = createRound('round');
+
+    /**
+     * Subtract two numbers.
+     *
+     * @static
+     * @memberOf _
+     * @category Math
+     * @param {number} minuend The first number in a subtraction.
+     * @param {number} subtrahend The second number in a subtraction.
+     * @returns {number} Returns the difference.
+     * @example
+     *
+     * _.subtract(6, 4);
+     * // => 2
+     */
+    function subtract(minuend, subtrahend) {
+      var result;
+      if (minuend === minuend && minuend != null) {
+        result = minuend;
+      }
+      if (subtrahend === subtrahend && subtrahend != null) {
+        result = result === undefined ? subtrahend : (result - subtrahend);
+      }
+      return result;
+    }
 
     /**
      * Gets the sum of the values in `array`.
@@ -13633,6 +13656,7 @@
     lodash.sortedLastIndexOf = sortedLastIndexOf;
     lodash.startCase = startCase;
     lodash.startsWith = startsWith;
+    lodash.subtract = subtract;
     lodash.sum = sum;
     lodash.sumBy = sumBy;
     lodash.template = template;

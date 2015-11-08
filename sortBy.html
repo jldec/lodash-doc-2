@@ -20,11 +20,10 @@
 </head>
 <body>
 
-<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x">&#xf039;</span>
+<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x"></span>
 
 <header>
-<a class="version" href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
-<a class="build" href="https://github.com/jldec/lodash-doc-src" target="_blank">Nov 7 09:22:07 EST</a>
+<a href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
 </header>
 
 <div id="search">
@@ -235,6 +234,7 @@
 <li><a href="./min" title="_.min(array)">min</a></li>
 <li><a href="./minBy" title="_.minBy(array, [iteratee=_.identity])">minBy</a></li>
 <li><a href="./round" title="_.round(number, [precision=0])">round</a></li>
+<li><a href="./subtract" title="_.subtract(minuend, subtrahend)">subtract</a></li>
 <li><a href="./sum" title="_.sum(array)">sum</a></li>
 <li><a href="./sumBy" title="_.sumBy(array, [iteratee=_.identity])">sumBy</a></li>
 </ul></li>
@@ -367,8 +367,8 @@
 
 <div id="main" onclick="">
 <div id="content" class="markdown-body">
-<div data-render-page="entry"><h2>sortBy <a class="fa-link" href="./sortBy" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L7681" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.sortby" title="See the npm package." target="npm">npm</a></h2>
-<div class="signature">_.sortBy(collection, [iteratees=[_.identity]])</div>
+<div data-render-page="entry"><h2>sortBy <a class="fa-link" href="./sortBy" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L7679" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.sortby" title="See the npm package." target="npm">npm</a></h2>
+<div class="signature">_.sortBy(collection, [iteratees&#x3D;[_.identity]])</div>
 
 <div data-render-html="/sortBy"><p>Creates an array of elements, sorted in ascending order by the results of
 running each element in a collection through each iteratee. This method
@@ -380,7 +380,7 @@ equal elements. The iteratees are invoked with one argument: (value).</p>
 <ol>
 <li><span class="param-name">collection</span> <span class="param-type">(Array|Object)</span> <div data-render-html="/#synthetic"><p>The collection to iterate over. </p>
 </div></li>
-<li><span class="param-name">[iteratees=[_.identity]]</span> <span class="param-type">(...(Function|Function[]|Object|Object[]|string|string[])</span> <div data-render-html="/#synthetic"><p> The iteratees to sort by, specified individually or in arrays. </p>
+<li><span class="param-name">[iteratees&#x3D;[_.identity]]</span> <span class="param-type">(...(Function|Function[]|Object|Object[]|string|string[])</span> <div data-render-html="/#synthetic"><p> The iteratees to sort by, specified individually or in arrays. </p>
 </div></li>
 </ol>
 <h3>Returns <span class="return-type">(Array)</span></h3>

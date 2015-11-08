@@ -20,11 +20,10 @@
 </head>
 <body>
 
-<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x">&#xf039;</span>
+<div data-render-layout="main-layout"><nav id="nav" onclick=""><span class="fa fa-2x"></span>
 
 <header>
-<a class="version" href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
-<a class="build" href="https://github.com/jldec/lodash-doc-src" target="_blank">Nov 7 09:22:07 EST</a>
+<a href="./" title="lodash"><img src="./images/logo.png" alt="lodash">v4.0.0-pre</a>
 </header>
 
 <div id="search">
@@ -235,6 +234,7 @@
 <li><a href="./min" title="_.min(array)">min</a></li>
 <li><a href="./minBy" title="_.minBy(array, [iteratee=_.identity])">minBy</a></li>
 <li><a href="./round" title="_.round(number, [precision=0])">round</a></li>
+<li><a href="./subtract" title="_.subtract(minuend, subtrahend)">subtract</a></li>
 <li><a href="./sum" title="_.sum(array)">sum</a></li>
 <li><a href="./sumBy" title="_.sumBy(array, [iteratee=_.identity])">sumBy</a></li>
 </ul></li>
@@ -367,7 +367,7 @@
 
 <div id="main" onclick="">
 <div id="content" class="markdown-body">
-<div data-render-page="entry"><h2>add <a class="fa-link" href="./add" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L13113" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.add" title="See the npm package." target="npm">npm</a></h2>
+<div data-render-page="entry"><h2>add <a class="fa-link" href="./add" title="Link to this entry.">&#xf0c1;</a> <a href="https://github.com/lodash/lodash/blob/4.0.0-pre/lodash.src.js#L13111" title="View in source." target="github">source</a> <a href="https://www.npmjs.com/package/lodash.add" title="See the npm package." target="npm">npm</a></h2>
 <div class="signature">_.add(augend, addend)</div>
 
 <div data-render-html="/add"><p>Adds two numbers.</p>
@@ -375,13 +375,13 @@
 
 <h3>Arguments</h3>
 <ol>
-<li><span class="param-name">augend</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The first number to add. </p>
+<li><span class="param-name">augend</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The first number in an addition. </p>
 </div></li>
-<li><span class="param-name">addend</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The second number to add. </p>
+<li><span class="param-name">addend</span> <span class="param-type">(number)</span> <div data-render-html="/#synthetic"><p>The second number in an addition. </p>
 </div></li>
 </ol>
 <h3>Returns <span class="return-type">(number)</span></h3>
-<div class="returns"> <div data-render-html="/#synthetic"><p> Returns the sum.</p>
+<div class="returns"> <div data-render-html="/#synthetic"><p> Returns the total.</p>
 </div></div>
 <h3>Example</h3>
 <div data-render-html="/#synthetic"><pre><code class="lang-js">_<span class="token punctuation" >.</span><span class="token function" >add</span><span class="token punctuation" >(</span><span class="token number" >6</span><span class="token punctuation" >,</span> <span class="token number" >4</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
