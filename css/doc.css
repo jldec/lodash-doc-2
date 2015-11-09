@@ -87,9 +87,9 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
 .param-type, .return-type { font-style:italic; font-weight:normal; }
 
 @media only screen and (max-width:666px) {
-  body { overflow-x:hidden; font-size:16px; }
-  #q { font-size:16px; }
+  body, #q { font-size:16px; }
   pre, code { font-size:14px; }
+  #toc { top:78px; }
   #main { margin-left:0; }
   #nav { left:-240px; }
   #nav.show { left:0; }
