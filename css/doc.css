@@ -90,13 +90,12 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
   body { overflow-x:hidden; font-size:16px; }
   #q { font-size:16px; }
   pre, code { font-size:14px; }
-  #main { margin-left:0; transition:margin 0.2s; }
+  #main { margin-left:0; }
   #nav { left:-240px; }
   #nav.show { left:0; }
-  #nav.show + #main { margin-left:240px; margin-right:-240px; }
   #nav > span.fa { left:0; color:#4078c0; opacity:0.5; cursor:pointer; }
-  #nav.show > span.fa:before { content:"\f053"; }
-  #nav > span.fa:hover { opacity:1; }
+  #nav.show > span.fa:before { content:"\f039"; }
+  #nav > span.fa:hover { opacity:0.8; }
   #nav > header a { margin:0 0 0 50px; }
 }
 
